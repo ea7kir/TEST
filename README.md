@@ -37,13 +37,11 @@ WARNING: the Pi may reboot during the install, so please allow it to complete
 ssh pi@pi4.local
 
 sudo apt -y git
-
-mkdir /home/pi/pi4wayland
-cd /home/pi/pi4wayland
+cd
 git clone https://github.com/ea7kir/pi4wayland.git
-
-chmod +x /home/pi/pi4wayland/etc/install.sh
-/home/pi/Q100/q100transmitter/etc/install.sh
+cd pi4wayland/etc
+chmod +x install.sh
+./install.sh
 ```
 
 THEN FOLLOW THE INSTRUCTIONS TO CONFIGURE THE DESKTOP

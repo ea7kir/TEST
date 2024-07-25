@@ -92,6 +92,14 @@ Installing gioui tools
 
 echo "
 ###################################################
+Adding autostart to ~/.config/wayfire.ini
+###################################################
+"
+
+echo $'\n[autostart]\nruntest=~/pi4wayland/pi4wayland\n' >> ~/.config/wayfire.ini
+
+echo "
+###################################################
 Prevent this script form being executed again
 ###################################################
 "
@@ -125,8 +133,6 @@ INSTALL HAS COMPLETED
     cd pi4wayland
     go mod tidy
     go build .
-    sudo systemctl enable q100receiver
-    sudo systemctl start q100receiver
 
 "
 
