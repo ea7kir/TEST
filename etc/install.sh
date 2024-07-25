@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Install pi4wayland Raspberry Pi 4
+# Install pi4wayland on pi4.local
 # Orignal design by Michael, EA7KIR
 
 GOVERSION=1.22.5
