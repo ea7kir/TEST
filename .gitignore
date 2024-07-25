@@ -1,0 +1,4 @@
+# ignore executable binary
+pi4wayland
+# ignore tests
+*.test
