@@ -104,36 +104,25 @@ Prevent this script form being executed again
 ###################################################
 "
 
-chmod -x /home/pi/Q100/etc/install.sh # to prevent it from being run a second time
+chmod -x /home/pi/pi4wayland/etc/install.sh
 
 echo "
 INSTALL HAS COMPLETED
 
     AFTER REBOOTING...
 
-    Ues your finger to configure some Desktop settings:
-
-    Screen Layout Editor
-	    move DSI-1 to the left of HDMI-1
-	    Layout/Screens set DSI-1 to Active, Primary
-	    Layout/Screens set HDMI-1 to Active, 1920x1080, 50Hz
-    Appearance Settings
-	    DSI-1 Layout No Image
-	    HDMI-1 Layout NoVideo.jpg
-	    Disable Wastebasket & External Disks
-    Raspberry Pi Configuration
-	    System set Network at Boot to ON
-
-    Then login from your PC, Mc, or Linux computer
+    Login from your PC, Mc, or Linux computer
 
     ssh pi@rxtouch.local
 
-    Now execute the following commands
+    and execute the following commands
     
     cd pi4wayland
     go mod tidy
     go build .
+    sudo reboot
 
+    After rebooting, the touchscree should display the App
 "
 
 while true; do

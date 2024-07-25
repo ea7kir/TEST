@@ -36,7 +36,6 @@ WARNING: the Pi may reboot during the install, so please allow it to complete
 ```
 ssh pi@pi4.local
 
-sudo apt -y git
 cd
 git clone https://github.com/ea7kir/pi4wayland.git
 cd pi4wayland/etc
