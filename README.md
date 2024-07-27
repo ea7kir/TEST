@@ -1,6 +1,6 @@
 # pi4wayland
 
-Stricly for testing wayland
+Stricly for testing gioui on Raspberry Pi OS Lite (64-bit)
 
 ## Hardware
 - Raspberry Pi 4B with 4GB RAM (minimum)
@@ -8,11 +8,11 @@ Stricly for testing wayland
 
 ## Installing
 
-NOTE: CURRENTLY REQUIRES PI OS BOOKWORM 64-BIT (FULL DESKTOP VERSION)
+NOTE: CURRENTLY REQUIRES Raspberry Pi OS Lite (64-bit)
 
 ### Using Raspberry Pi Imager v1.8.5:
 ```
-CHOOSE OS: Raspberry Pi OS (other) -> Raspberry Pi OS (64-bit)
+CHOOSE OS: Raspberry Pi OS (other) -> Raspberry Pi OS Lite (64-bit)
 
 CONFIGURE:
 	Set hostname:			pi4
@@ -37,8 +37,8 @@ WARNING: the Pi may reboot during the install, so please allow it to complete
 ssh pi@pi4.local
 
 cd
-git clone https://github.com/ea7kir/pi4wayland.git
-cd pi4wayland/etc
+git clone https://github.com/ea7kir/pi4lite.git
+cd pi4lite/etc
 chmod +x install.sh
 ./install.sh
 ```
