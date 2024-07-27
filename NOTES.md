@@ -1,10 +1,8 @@
 # Notes
 
-running under wayland desktop
+Compile withou x11
 
-Errors in ~/.xsession-errors
-    xrdb: Can't open display ''
-    xhost:  unable to open display ""
+go build --tags nox11 .
 
 
 ## Ultra Minimal Kiosk
@@ -37,15 +35,23 @@ EE 27-07-24 14:08:24.335 - [types/wlr_cursor.c:875] Cannot map device "vc4-hdmi-
 EE 27-07-24 14:08:24.335 - [types/wlr_cursor.c:875] Cannot map device "vc4-hdmi-1" to output (not found in this cursor)
 ```
 
+Press Control-C to stop it
+
 ## Via an attached keyboard & Mouse
 
-Also works. To kill it, login over SSH and execute...
-
-```sudo killall wayfire```
 
 Errors after kill...  Note: unable to see the end of the message - touchscreen not wide enough
 
 ```
 cursor)7.299 - [types/wlr_cursor.c:875] Cannot map device "vc4-hdmi-1" to output (not fo)
 ```
+
+Press Control-C to stop it
+
+## Moving on...
+
+Install wayfire-plugins-extra package. Unfortunately it is not available in the Bookworm repos. You have two ways to install it [1]
+
+https://github.com/WayfireWM/wayfire-plugins-extra
+
 

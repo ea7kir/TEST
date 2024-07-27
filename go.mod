@@ -1,4 +1,4 @@
-module pi4wayland
+module pi4way
 
 go 1.22.5
 
