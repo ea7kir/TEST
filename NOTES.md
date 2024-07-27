@@ -50,6 +50,8 @@ Press Control-C to stop it
 
 ## Moving on...
 
+```sudo apt install xwayland``` solves:   Cannot find Xwayland binary "/usr/bin/Xwayland"
+
 Install wayfire-plugins-extra package. Unfortunately it is not available in the Bookworm repos. You have two ways to install it [1]
 
 https://github.com/WayfireWM/wayfire-plugins-extra
