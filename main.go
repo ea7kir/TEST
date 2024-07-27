@@ -12,25 +12,30 @@ import (
 )
 
 func main() {
+	log.SetFlags(log.LstdFlags | log.Lshortfile)
+	log.Printf("---------- pi4lite Opened ------------")
 	go func() {
-		window := new(app.Window)
-		window.Option(app.Fullscreen.Option())
-		err := run(window)
-		if err != nil {
-			log.Fatal(err)
+		// os.Setenv("DISPLAY", ":0") // required for X11
+		// app.Size(800, 480) // I don't know if this would help in any way
+		var w app.Window
+		w.Option(app.Fullscreen.Option())
+
+		if err := loop(&w); err != nil {
+			log.Fatalf("FATAL failed to start loop: %v", err)
 		}
+
+		log.Printf("---------- pi4lite Closed ------------")
 		os.Exit(0)
 	}()
-	app.Size(800, 480)
 	app.Main()
 }
 
 
-func run(window *app.Window) error {
+func loop(w *app.Window) error {
 	theme := material.NewTheme()
 	var ops op.Ops
 	for {
-		switch e := window.Event().(type) {
+		switch e := w.Event().(type) {
 		case app.DestroyEvent:
 			return e.Err
 		case app.FrameEvent:
