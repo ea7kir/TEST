@@ -26,6 +26,7 @@ Force Wayland through raspi-config --> reboot
 
 This workss, but if executed via SSH we get some errors...
 
+```
 EE 27-07-24 14:08:21.421 - [EGL] command: eglQueryDeviceStringEXT, error: EGL_BAD_PARAMETER (0x300c), message: "eglQueryDeviceStringEXT"
 EE 27-07-24 14:08:21.421 - [EGL] command: eglQueryDeviceStringEXT, error: EGL_BAD_PARAMETER (0x300c), message: "eglQueryDeviceStringEXT"
 
@@ -34,9 +35,17 @@ EE 27-07-24 14:08:23.944 - [xwayland/server.c:442] Cannot find Xwayland binary "
 
 EE 27-07-24 14:08:24.335 - [types/wlr_cursor.c:875] Cannot map device "vc4-hdmi-0" to output (not found in this cursor)
 EE 27-07-24 14:08:24.335 - [types/wlr_cursor.c:875] Cannot map device "vc4-hdmi-1" to output (not found in this cursor)
+```
 
 ## Via an attached keyboard & Mouse
 
+Also works. To kill it, login over SSH and execute...
 
+```sudo killall wayfire```
 
+Errors after kill...  Note: unable to see the end of the message - touchscreen not wide enough
+
+```
+cursor)7.299 - [types/wlr_cursor.c:875] Cannot map device "vc4-hdmi-1" to output (not fo)
+```
 
