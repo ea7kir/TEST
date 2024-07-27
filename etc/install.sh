@@ -96,7 +96,7 @@ Adding autostart to ~/.config/wayfire.ini
 ###################################################
 "
 
-echo $'\n[autostart]\nruntest=~/pi4wayland/pi4wayland\n' >> ~/.config/wayfire.ini
+# echo $'\n[autostart]\nruntest=~/pi4wayland/pi4wayland\n' >> ~/.config/wayfire.ini
 
 echo "
 ###################################################
