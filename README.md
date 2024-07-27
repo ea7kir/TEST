@@ -37,7 +37,7 @@ WARNING: the Pi may reboot during the install, so please allow it to complete
 ssh pi@pi4.local
 
 sudo apt update
-sudo apt install git
+sudo apt -y install git
 cd
 git clone https://github.com/ea7kir/pi4lite.git
 cd pi4lite/etc
