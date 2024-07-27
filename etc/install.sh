@@ -18,7 +18,7 @@ if [ $? != 0 ]; then
 fi
 
 while true; do
-   read -p "Install q100receiver using Go version $GOVERSION (y/n)? " answer
+   read -p "Install pi4lite using Go version $GOVERSION (y/n)? " answer
    case ${answer:0:1} in
        y|Y ) break;;
        n|N ) exit;;
@@ -44,12 +44,6 @@ Making changes to config.txt
 "
 
 # TODO: as needed
-
-echo "
-###################################################
-Making changes to config.txt
-###################################################
-"
 
 echo "
 ###################################################
@@ -92,19 +86,11 @@ Installing gioui tools
 
 echo "
 ###################################################
-Adding autostart to ~/.config/wayfire.ini
-###################################################
-"
-
-# echo $'\n[autostart]\nruntest=~/pi4wayland/pi4wayland\n' >> ~/.config/wayfire.ini
-
-echo "
-###################################################
 Prevent this script form being executed again
 ###################################################
 "
 
-chmod -x /home/pi/pi4wayland/etc/install.sh
+chmod -x /home/pi/pi4lite/etc/install.sh
 
 echo "
 INSTALL HAS COMPLETED
@@ -113,16 +99,16 @@ INSTALL HAS COMPLETED
 
     Login from your PC, Mc, or Linux computer
 
-    ssh pi@rxtouch.local
+    ssh pi@pi4.local
 
     and execute the following commands
     
-    cd pi4wayland
+    cd pi4lie
     go mod tidy
     go build .
     sudo reboot
 
-    After rebooting, the touchscree should display the App
+    After rebooting, the touchscreen should display the App
 "
 
 while true; do
