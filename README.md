@@ -1,6 +1,6 @@
 # pi4wayland
 
-Stricly for testing gioui on Raspberry Pi OS Lite (64-bit)
+Strictly for testing gioui on Raspberry Pi OS Lite (64-bit)
 
 ## Hardware
 - Raspberry Pi 4B with 4GB RAM (minimum)
