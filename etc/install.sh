@@ -103,7 +103,7 @@ INSTALL HAS COMPLETED
 
     and execute the following commands
     
-    cd pi4lie
+    cd pi4lite
     go mod tidy
     go build .
     sudo reboot
