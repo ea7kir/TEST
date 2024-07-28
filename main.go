@@ -15,7 +15,8 @@ func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	log.Printf("---------- pi4lite Opened ------------")
 	go func() {
-		// os.Setenv("DISPLAY", ":0") // required for X11
+		// os.Setenv("DISPLAY", ":0") // required for X11. Compile wit: go build --tags nowayland .
+		os.Setenv("WAYLAND_DISPLAY", "wayland-1") // required for wayland. Compile with: go build --tags nox11 .
 		// app.Size(800, 480) // I don't know if this would help in any way
 		var w app.Window
 		w.Option(app.Fullscreen.Option())
@@ -29,7 +30,6 @@ func main() {
 	}()
 	app.Main()
 }
-
 
 func loop(w *app.Window) error {
 	theme := material.NewTheme()
@@ -60,4 +60,3 @@ func loop(w *app.Window) error {
 		}
 	}
 }
-
