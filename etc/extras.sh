@@ -12,13 +12,6 @@ sudo apt-get install blackbox
 
 sudo apt-get install xterm
 
-# startx
+# startx ### this works, but only from the console
 
-# sudo apt-get install lightdm
-
-
-
-
-
-
-
+# sudo apt-get install lightdm ### lightdm.service fails to satrt
