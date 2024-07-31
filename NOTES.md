@@ -56,4 +56,9 @@ Install wayfire-plugins-extra package. Unfortunately it is not available in the 
 
 https://github.com/WayfireWM/wayfire-plugins-extra
 
+## Giving up on the above
+
+Trying another way without wayland or wayfire, but with only X11.
+
+
 
