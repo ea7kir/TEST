@@ -45,7 +45,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-THEN FOLLOW THE INSTRUCTIONS TO CONFIGURE THE DESKTOP
+THEN FOLLOW THE INSTRUCTIONS
 
 ## License
 Copyright (c) 2023 Michael Naylor EA7KIR (https://michaelnaylor.es)
