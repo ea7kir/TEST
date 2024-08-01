@@ -43,7 +43,7 @@ Install X11 components
 ###################################################
 "
 
-sudo apt -y install xserver-xorg xinit x11-xserver-utils
+# sudo apt -y install xserver-xorg xinit x11-xserver-utils
 # sudo apt -y install blackbox
 # sudo apt -y install xterm
 # sudo apt -y install lightdm
