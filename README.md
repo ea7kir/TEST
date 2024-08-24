@@ -45,7 +45,27 @@ chmod +x install.sh
 ./install.sh
 ```
 
-THEN FOLLOW THE INSTRUCTIONS
+### After revooting
+Login from a PC, Mac, or Linux computer
+```
+ssh pi@pi4.local or open VSCODE to RxTouch  ~/Q100/pi4lite
+```
+Execute the following commands
+```
+cd pilite
+go mod tidy
+go build --tags nox11 .
+```
+Execute pi4lite from the current directory
+```
+./piforlite
+```
+If all went well it can be executed at boot by enabling systemctl
+```
+sudo systemctl enable pi4lite
+sudo systemctl start pi4lite
+```
+Note: add or omit the ```-shutdown``` flag in the service file to allow a full shutdown as required
 
 ## License
 Copyright (c) 2023 Michael Naylor EA7KIR (https://michaelnaylor.es)

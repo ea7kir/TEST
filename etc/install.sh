@@ -4,6 +4,7 @@
 # Orignal design by Michael, EA7KIR
 
 GOVERSION=1.22.5
+GIOUIVERSION=7.1
 
 whoami | grep -q pi
 if [ $? != 0 ]; then
@@ -37,11 +38,11 @@ sudo apt -y full-upgrade
 sudo apt -y autoremove
 sudo apt clean
 
-echo "
-###################################################
-Install X11 components
-###################################################
-"
+# echo "
+# ###################################################
+# Install X11 components
+# ###################################################
+# "
 
 # sudo apt -y install xserver-xorg xinit x11-xserver-utils
 # sudo apt -y install blackbox
@@ -50,11 +51,20 @@ Install X11 components
 
 echo "
 ###################################################
-Making changes to config.txt
+Making changes to config.txt TODO:
 ###################################################
 "
 
-# TODO: as needed
+#sudo sh -c "echo '\n# EA7KIR Additions' >> /boot/firmware/config.txt"
+
+# Disable Wifi
+#sudo sh -c "echo 'dtoverlay=disable-wifi' >> /boot/firmware/config.txt"
+
+# Disable Bluetooth
+#sudo sh -c "echo 'dtoverlay=disable-bt' >> /boot/firmware/config.txt"
+
+# EXPERIMENTAL: raspi-config, select System / Audio, choose 1
+#sudo sh -c "echo 'dtparam=audio=off' >> /boot/firmware/config.txt"
 
 echo "
 ###################################################
@@ -89,11 +99,11 @@ sudo apt -y install gcc pkg-config libwayland-dev libx11-dev libx11-xcb-dev libx
 
 echo "
 ###################################################
-Installing gioui tools
+Installing gioui tools $GIOUIVERSION
 ###################################################
 "
 
-/usr/local/go/bin/go install gioui.org/cmd/gogio@latest
+/usr/local/go/bin/go install gioui.org/cmd/gogio@$GIOUIVERSION
 
 echo "
 ###################################################
@@ -104,22 +114,9 @@ Prevent this script form being executed again
 chmod -x /home/pi/pi4lite/etc/install.sh
 
 echo "
+###################################################
 INSTALL HAS COMPLETED
-
-    AFTER REBOOTING...
-
-    Login from your PC, Mc, or Linux computer
-
-    ssh pi@pi4.local
-
-    and execute the following commands
-    
-    cd pi4lite
-    go mod tidy
-    go build .
-    sudo reboot
-
-    After rebooting, the touchscreen should display the App
+###################################################
 "
 
 while true; do

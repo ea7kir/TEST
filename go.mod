@@ -1,4 +1,4 @@
-module pi4way
+module pi4lite
 
 go 1.22.5
 
