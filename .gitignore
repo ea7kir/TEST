@@ -1,4 +1,4 @@
 # ignore executable binary
-pi4way
+pi4lite
 # ignore tests
 *.test

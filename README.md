@@ -45,7 +45,7 @@ chmod +x install.sh
 ./install.sh
 ```
 
-### After revooting
+### After rebooting
 Login from a PC, Mac, or Linux computer
 ```
 ssh pi@pi4.local or open VSCODE to RxTouch  ~/Q100/pi4lite

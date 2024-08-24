@@ -38,16 +38,16 @@ sudo apt -y full-upgrade
 sudo apt -y autoremove
 sudo apt clean
 
-# echo "
-# ###################################################
-# Install X11 components
-# ###################################################
-# "
+echo "
+###################################################
+Install X11 components
+###################################################
+"
 
-# sudo apt -y install xserver-xorg xinit x11-xserver-utils
-# sudo apt -y install blackbox
-# sudo apt -y install xterm
-# sudo apt -y install lightdm
+sudo apt -y install xserver-xorg xinit x11-xserver-utils
+sudo apt -y install blackbox
+sudo apt -y install xterm
+sudo apt -y install lightdm
 
 echo "
 ###################################################
@@ -104,6 +104,17 @@ Installing gioui tools $GIOUIVERSION
 "
 
 /usr/local/go/bin/go install gioui.org/cmd/gogio@$GIOUIVERSION
+
+echo "
+###################################################
+Installing wayfire TODI:
+###################################################
+"
+
+cd
+mkdir .config
+touch .config/wayfire.ini
+sudo apt install wayfire seatd xdg-user-dirs lightdm
 
 echo "
 ###################################################
